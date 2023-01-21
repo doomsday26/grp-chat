@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.centalign{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image{
+    border: 2px solid black;
+    border-radius: 2vh;
+    width: 30rem;
+    margin: 1rem 2rem ;
+    
+}
+
+.main{
+    display: flex;
+    flex-direction: row;
+    background-image: url('https://user-images.githubusercontent.com/28984101/114362224-bb040500-9b94-11eb-8dbd-d3d733b3bdeb.png');
+    background-blend-mode: lighten;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+ 
+}
+.box{
+    border: 2px solid black;
+    width: 50rem;
+    height: 95vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.650);
+    justify-content: flex-start;
+    margin: 1.5vh 1.5vw;
+    border-radius: 2rem;
+}
+
+.heading{
+ color: rgb(26, 22, 22);
+ justify-content: baseline;
+ margin-top: 1vh;
+ margin-left: 1vw;
+}
+
+#left{
+    color: black;
+    text-align:left;
+    justify-content: left;
+    align-items:flex-start;
+    
+}
+
+h1{
+    margin: 1vh auto;
+}
+
+p{
+    margin-left: 1rem;
+    font-weight: bold;
+    font-size: large;
+    justify-content: start;
+    text-align :start;
+}
+
+#right{
+    justify-content: center;
+}
+
+#form{
+    width: 80%;
+    background: rgba(255, 255, 255, 0.626);
+    border: 2px solid black;
+    border-radius: 2px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 4%;
+    padding :4%;
+    flex-direction: column;
+    border-radius: 5px;
+}
+
+.from-item{
+    margin: 0.2% 0.5%;
+    height: 1.5rem;
+    border-radius: 5px;
+    font-size: large;
+    font-weight:900;
+}
+
+#right p{
+    margin: 2vh 2vw;
+font-size: large;
+font-weight: bold;
+}
+
+
+.inner-box{
+    display: flex;
+    margin-left: 4%;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+.btn{
+    width: 10rem;
+    font-size: small;
+    font-weight: 400;
+    background-color: black;
+    color: white;
+ 
+}

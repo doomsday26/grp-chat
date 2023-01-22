@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 
-router.use('/',registerController.signup )
+router.post('/',registerController.signup )
 
 
 module.exports=router

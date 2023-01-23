@@ -25,7 +25,8 @@ console.log(result);
 localStorage.setItem("usercred",result.key)
 email.value=''
 password.value=''
-
+alert('you have logged in successfully')
+window.location.assign('chat.html')
 } catch (err) {
     console.log(err);
     alert(err.message)

@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+body{
+    background: rgb(62, 102, 232);
+}
+
+ #app-heading {
+    margin: 2vh 40%;
+
+}
+
+#chats{
+    height: 70vh;
+list-style: none;
+margin: 1vh 0;
+padding: 1vh 1vw;
+display: flex;
+flex-direction: column;
+text-align: start;
+justify-content: flex-start;
+margin: 1vh 2vw;
+border: 2px solid black;
+background-color: rgba(255, 255, 255, 0.874);
+border-radius: 5px;
+overflow-y: scroll;
+}
+.chat{
+    text-decoration: none;
+    margin-top: 0.6vh;
+    padding: 0.1vh 0.2vw;
+}
+
+.chat:nth-child(odd) { background: rgba(87, 172, 217, 0.721); }
+
+#form{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+#message{
+    width: 85vw;
+    height: 3vh;
+}
+#send{
+    width: 15vw;
+    height: 3vh;
+}
+
+#sendmsg{
+    position: fixed;
+bottom: 0.5vh;
+}

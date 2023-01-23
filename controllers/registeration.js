@@ -30,6 +30,6 @@ res.status(201).json({success:true,message:"you have successfully signed in, now
 } catch (error) {
     console.log(error);
 }
-//{ name: 'h1', password: '1234', email: 'h1.com' }
+
 
 }

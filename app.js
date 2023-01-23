@@ -14,10 +14,10 @@ app.use(bodyParser.json())
 
 app.use('/signup',userRegesterationRoutes)
 app.use('/login',loginRoutes)
-app.use((req,res)=>{
-    console.log(req.url);
- res.sendFile(path.join(__dirname,`./views/${req.url}`))
-} )
+// app.use((req,res)=>{
+//     console.log(req.url);
+//  res.sendFile(path.join(__dirname,`./views/${req.url}`))
+// } )
 
 
 
@@ -25,8 +25,8 @@ app.use((req,res)=>{
 
 
 sequelize
-.sync({force:true})
-//.sync()
+//.sync({force:true})
+.sync()
 .then(result=>{
 
 }).catch(err=>{console.log(err);})

@@ -1,8 +1,9 @@
 const express= require('express')
 const router= express.Router()
 const chatcontroller= require('../controllers/chatcontroller')
-router.post('/',chatcontroller.addmsg)
-router.get('/',chatcontroller.sendchats)
+let authenticatecontroller= require('../controllers/authenticatecontroller')
+router.post('/',authenticatecontroller.authenticate ,chatcontroller.addmsg)
+router.get('/',authenticatecontroller.authenticate,chatcontroller.sendchats)
 
 
 module.exports= router

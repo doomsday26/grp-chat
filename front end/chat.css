@@ -10,7 +10,7 @@ body{
 
  #app-heading {
     margin: 2vh 40%;
-
+color: white;
 }
 
 #chats{
@@ -38,6 +38,7 @@ overflow-y: scroll;
 
 #form{
 
+padding: 0.5vh 0.5vw;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -48,8 +49,10 @@ overflow-y: scroll;
     height: 3vh;
 }
 #send{
-    width: 15vw;
+    margin-left: 0.5vh;
+    width: 13vw;
     height: 3vh;
+    border-radius: 0.1vh;
 }
 
 #sendmsg{

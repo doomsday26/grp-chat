@@ -4,8 +4,8 @@ const jwt = require('jsonwebtoken');
 const bcrypt=require('bcrypt')
 
 
-function generateAccessToken({useremail,password}) {
-    return jwt.sign({email:useremail,password:password}, process.env.JWT_SECRET_KEY, { expiresIn: '1800s' });
+function generateAccessToken({useremail,password,id}) {
+    return jwt.sign({email:useremail,password:password,id:id}, process.env.JWT_SECRET_KEY);
   }
 
 exports.login=async (req,res,next)=>{
@@ -17,7 +17,7 @@ if(users.length>0){
     console.log(user);
     let boolean= await bcrypt.compare(req.body.password,user.password)
 if(boolean){
-const token = generateAccessToken({ useremail: req.body.email,password:req.body.password });
+const token = generateAccessToken({ useremail: req.body.email,password:req.body.password, id:user.id });
 console.log(token);
 res.json({key:token})
 

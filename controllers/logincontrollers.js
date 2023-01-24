@@ -2,7 +2,7 @@ const express= require('express');
 const User= require('../models/user')
 const jwt = require('jsonwebtoken');
 const bcrypt=require('bcrypt')
-
+const Message= require('../models/message')
 
 function generateAccessToken({useremail,password,id}) {
     return jwt.sign({email:useremail,password:password,id:id}, process.env.JWT_SECRET_KEY);
@@ -17,6 +17,7 @@ if(users.length>0){
     console.log(user);
     let boolean= await bcrypt.compare(req.body.password,user.password)
 if(boolean){
+let msg = await user.createMessage({text:"just logged in"})
 const token = generateAccessToken({ useremail: req.body.email,password:req.body.password, id:user.id });
 console.log(token);
 res.json({key:token})

@@ -26,6 +26,7 @@ localStorage.setItem("usercred",result.key)
 email.value=''
 password.value=''
 alert('you have logged in successfully')
+await getchats()
 window.location.assign('chat.html')
 } catch (err) {
     console.log(err);
@@ -34,3 +35,12 @@ window.location.assign('chat.html')
 }
 
 }
+
+async function getchats() {
+    let chatmessages = await axios.get(http + "/chat/", {
+      headers: { data: localStorage.getItem("usercred") },
+    });
+  let chatdata= JSON.stringify(chatmessages) 
+  localStorage.setItem('chatdata',chatdata)
+  
+  }

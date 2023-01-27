@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 exports.authenticate = async (req, res, next) => {
   try {
     console.log("entering sendind chats");
-    console.log("request body>>>>>>", req.headers);
+    //console.log("request body>>>>>>", req.headers);
     let data = await new Promise((resolve, reject) => {
       jwt.verify(req.headers.data, process.env.JWT_SECRET_KEY, (err, data) => {
         if (err) {
@@ -15,7 +15,7 @@ exports.authenticate = async (req, res, next) => {
         }
       });
     });
-    console.log(data);
+   // console.log(data);
     authuserid = data.id;
     let users = await User.findAll({ where: { id: data.id } });
     if (users.length > 0) {

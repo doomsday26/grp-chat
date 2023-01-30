@@ -1,77 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="chat.css">
-</head>
-<body>
- <h2 id="app-heading">JUST CHAT !!</h2>
- <div id="whole"> 
-     <div id="groupdiv">
-        <header id="header"><span>Create new group</span><button id="newGrp" >New Group</button></header>
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <h2 id="app-heading">JUST CHAT !!</h2>
+    <div id="whole">
+      <div id="groupdiv">
+        <header id="header">
+          <span>Create new group</span><button id="newGrp">New Group</button>
+        </header>
         <h3>Your Groups</h3>
-       
-              <ul id="groups">
-             <li id="1" class="groupname">launde lapate</li>
-             <li id="2" class="groupname">our group</li>
-             <li id="3" class="groupname">doglapan</li>
-            </ul>
-            <div id="createNewGroup">
-                <form id="groupdetails" action="">
-    <label for="groupname">ENTER  GROUP  NAME :</label>
-    <input type="text" name="groupname" id="groupname">
-    <input type="button" class="btn" name="" id="closecreategroup" value="X">
-    <input type="submit" class="btn" name="creategroup" id="greategroup" value="Create">
-                </form>
-                <div id="membersdiv">
-                    <div id="insertmembers" class="divmember">
-                        <h3>click user to add to group</h3>
-                        <ul id="allmembers">
-                            <li  class="user" id="2">user2 </li>
-                            <li  class="user" id="3">user3 </li>
-                        </ul>
-                    </div>
-                 
-                    <div id="addedmembers" class="divmember">
-                        <h3>Members added to group</h3>
-                        <ul id="grpmembers" >
-                            <li class="grpmember" id="1"><span>user1</span> <button class="btn removemember">REMOVE</button></li>
-                            <li class="grpmember" id="4"><span>user4</span> <button class="btn removemember">REMOVE</button></li>
-                        </ul>
-                    </div>
-                  
-                </div>
-            </div>
-        </div>
-<div id="selectgroup">
-    <h2>select a group and or create a group and start chatting </h2>
-</div>
 
-        <div id="chatfunctions" > 
-            <h3 id="groupName">Launde Lapate</h3>
-            <div id="chatmsgs">
-                <ul id="oldchats" class="chats">
-                    <li class="chat" ><span class="username">user1 </span><span class="chatmsg" > has logged in</span> </li>
-                    <li class="chat" ><span class="username">user1 </span><span>: </span><span class="chatmsg" > message 1 u1</span> </li> 
-                </ul>
-                <ul id="newchats" class="chats" >        
-                    <li class="chat" ><span class="username">user1 </span><span class="chatmsg" > has logged in</span> </li>
-                    <li class="chat" ><span class="username">user1 </span><span>: </span><span class="chatmsg" > message 1 u1</span> </li> 
-             
-                </ul>
+        <ul id="groups">
+          <li id="1" class="groupname">launde lapate</li>
+          <li id="2" class="groupname">our group</li>
+          <li id="3" class="groupname">doglapan</li>
+        </ul>
+        <div id="createNewGroup">
+          <form id="groupdetails" action="">
+            <label for="groupname">ENTER GROUP NAME :</label>
+            <input type="text" name="groupname" id="groupname" />
+            <input
+              type="button"
+              class="btn"
+              name=""
+              id="closecreategroup"
+              value="X"
+            />
+            <input
+              type="submit"
+              class="btn"
+              name="creategroup"
+              id="greategroup"
+              value="Create"
+            />
+          </form>
+          <div id="membersdiv">
+            <div id="insertmembers" class="divmember">
+              <h3>click user to add to group</h3>
+              <ul id="allmembers">
+                <li class="user" id="2">user2</li>
+                <li class="user" id="3">user3</li>
+              </ul>
             </div>
-            <div id="sendmsg">
-                <form action="" id="form">
-                    <input type="text" id="message">
-                    <input type="submit" id="send" value="SEND">
-                </form>
+
+            <div id="addedmembers" class="divmember">
+              <h3>Members to be added to group</h3>
+              <ul id="grpmembers">
+                <li class="grpmember" id="1">
+                  <span>user1</span>
+                  <button class="btn removemember">REMOVE</button>
+                </li>
+                <li class="grpmember" id="4">
+                  <span>user4</span>
+                  <button class="btn removemember">REMOVE</button>
+                </li>
+              </ul>
             </div>
+          </div>
         </div>
+      </div>
+      <div id="selectgroup">
+        <h2>select a group and or create a group and start chatting</h2>
+      </div>
+
+      <div id="chatfunctions">
+        <div id="groupheading">
+          <h3 class="groupName">Launde Lapate</h3>
+
+          <button id="Settings" class="btn">Settings</button>
+        </div>
+
+        <div id="groupSettings">
+          <h2>
+            Group Settings <span id="isAdmin"></span>  <button id="closeSettings" class="btn">X</button>
+          </h2>
+          <div style="height: 3.5vh">
+            <label for="groupname">Change groupname</label>
+            <input type="text" name="groupname" id="newgroupname" />
+            <button class="btn" id="submitChangedsettings">
+              Submit Changes
+            </button>
+          </div>
+          <div>
+            <ul id="settingsMembers">
+              <li id="1" class="settingsMember">
+                <span class="settingsMemberName">user1</span>
+                <span class="settingsAdmin">admin</span
+                ><button class="btn removeAdmin">remove admin</button
+                ><button class="btn removeFromGroup">remove</button>
+              </li>
+              <li class="settingsMember">
+                <span class="settingsMemberName">user2</span
+                ><span class="isAdmin">not admin</span
+                ><button class="btn makeAdmin">make admin</button
+                ><button class="btn removeFromGroup">remove</button>
+              </li>
+            </ul>
+            <h3>Add More Memebers</h3>
+            <div id="addMoreMembers">
+              <div id="insertmembers" class="settingsDivmember">
+                <h4>click user to add to group</h4>
+                <ul id="moreUsers">
+                  <li class="moreUser" id="2">user2</li>
+                  <li class="moreUser" id="3">user3</li>
+                </ul>
+              </div>
+
+              <div id="addedNewMembers" class="settingsDivmember">
+                <h4>Members to be added to group</h4>
+                <ul id="newMembers">
+                  <!-- <li class="newGrpMember" id="1"><span>user1</span> <button class="btn removeNewMember">remove</button></li>
+                        <li class="newGrpMember" id="4"><span>user4</span> <button class="btn removeNewMember">remove</button></li> -->
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="chatmsgs">
+          <ul id="oldchats" class="chats">
+            <li class="chat">
+              <span class="username">user1 </span
+              ><span class="chatmsg"> has logged in</span>
+            </li>
+            <li class="chat">
+              <span class="username">user1 </span><span>: </span
+              ><span class="chatmsg"> message 1 u1</span>
+            </li>
+          </ul>
+          <ul id="newchats" class="chats">
+            <li class="chat">
+              <span class="username">user1 </span
+              ><span class="chatmsg"> has logged in</span>
+            </li>
+            <li class="chat">
+              <span class="username">user1 </span><span>: </span
+              ><span class="chatmsg"> message 1 u1</span>
+            </li>
+          </ul>
+        </div>
+        <div id="sendmsg">
+          <form action="" id="form">
+            <input type="text" id="message" />
+            <input type="submit" id="send" value="SEND" />
+          </form>
+        </div>
+      </div>
     </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.2.0/axios.min.js"></script>
-<script src="chat.js"></script>
-</body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.2.0/axios.min.js"></script>
+    <script src="chat.js"></script>
+  </body>
 </html>

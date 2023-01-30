@@ -1,256 +1,367 @@
-*{
-    margin: 0;
-    padding: 0;
-   
+* {
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    background: rgb(52 66 110);
+body {
+  background: rgb(52 66 110);
 }
 
- #app-heading {
-text-align: center;
-color: white;
+#app-heading {
+  text-align: center;
+  color: white;
 }
 
-
-
-#chatmsgs{
-    height: 87.5vh;
-    overflow-y: scroll;
+#chatmsgs {
+  height: 87.5vh;
+  overflow-y: scroll;
 }
 
-.chats{
-list-style: none;
-padding: 0 1vw;
-display: flex;
-flex-direction: column;
-text-align: start;
-justify-content: flex-start;
+.chats {
+  list-style: none;
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  justify-content: flex-start;
 
-background-color: #ffffff2e;
-
-
+  background-color: #ffffff2e;
 }
-.chat{
-    text-decoration: none;
-    margin-top: 0.6vh;
-    padding:0.2vw;
+.chat {
+  text-decoration: none;
+  margin-top: 0.6vh;
+  padding: 0.2vw;
 }
 
-.chat:nth-child(odd) { background: rgba(87, 172, 217, 0.721); }
-
-#form{
-
-padding: -0.5vh 0;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-margin-top: 1.2vh;
-}
-#message{
-    width: 70vw;
-    height: 3vh;
-    border-radius: 0.5vh;
-}
-#send{
-    margin-left: 0.3vh;
-    margin-top:0.1vh;
-    width: 10vw;
-    height: 3vh;
-    border-radius: 0.5vh;
-
-    color: rgb(53, 109, 182);
-    cursor: pointer;
-background-color:#b4d2ea;
-font-weight: bold;
-border: 0;
+.chat:nth-child(odd) {
+  background: rgba(87, 172, 217, 0.721);
 }
 
-#sendmsg{
-    position: fixed;
-bottom: 0.5vh;
+#form {
+  padding: -0.5vh 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1.2vh;
+}
+#message {
+  width: 70vw;
+  height: 3vh;
+  border-radius: 0.5vh;
+}
+#send {
+  margin-left: 0.3vh;
+  margin-top: 0.1vh;
+  width: 10vw;
+  height: 3vh;
+  border-radius: 0.5vh;
+
+  color: rgb(53, 109, 182);
+  cursor: pointer;
+  background-color: #b4d2ea;
+  font-weight: bold;
+  border: 0;
 }
 
-#whole{
-    display: flex;
-    flex-direction: row;
-
+#sendmsg {
+  position: fixed;
+  bottom: 0.5vh;
 }
 
-#chatfunctions{
-    /* border: 2px solid black; */
-    display: none;
-    width:80vw
+#whole {
+  display: flex;
+  flex-direction: row;
 }
-#chatfunctions h3{
+#groupheading {
+  display: flex;
+  height: 3vh;
+  margin-bottom: 1vh;
+  padding-bottom: 1vh;
+}
+#Settings {
+  float: right;
+  height: 4vh;
+  border-radius: 0.5vh;
+  margin-left: 2vw;
+}
+
+.groupName {
+  border-radius: 0.5vh;
+  width: 70vw;
+}
+
+#groupSettings {
+  background-color: white;
+  padding: 1vh;
+  position: absolute;
+  right: 10vh;
+  top: 10vh;
+  display: block;
+  border: 0.8vh solid rgb(103, 103, 236);
+  width: 70vw;
+  border-radius: 0.4vh;
+  height: 60vh;
+}
+
+#closeSettings {
+  float: right;
+height: 4vh;
+}
+
+#groupSettings h2 {
     height: 4vh;
-}
-#selectgroup{
-display: block;
-width: 80vw;
-justify-content: center;
-text-align: center;
-}
-
-#selectgroup h2{
-margin-top: 30%;
-color: white;
+    padding: 0.4vh;
+  justify-content: center;
+  background-color: #367fbac3;
+  justify-content: center;
+  align-items: center;
 }
 
 
-#groupdiv{
-    width: 18vw;
-    /* border: 2px solid black; */
-    margin-right: 0.5vw;
-    background-color:#ffffff2e;
-    border-top-right-radius: 1vh;
-    padding: 0.2vh 0.2vw;
-    display: flex;
-flex-direction: column;
-height: 95.2vh;
-cursor: pointer;
+
+
+#settingsMembers{
+    list-style: none;
+}
+.settingsMember{
+    background-color:#b4d2ea ;
+    padding: 0.4vh;
+    margin: 0.3vh;
+display: flex;
+justify-content: flex-start;
+}
+.isAdmin,.settingsAdmin {
+width: 11vw;
+margin-left: 1vw;
+}
+.settingsMemberName{
+    width:36vh;
+}
+.makeAdmin,.removeAdmin,.removeFromGroup{
+    width: 13vw;
+    float: right;
+    margin-left: 1vh;
+}
+#submitChangedsettings{
+    float: right;
+    margin-top:0.2vh ;
 }
 
- h3{
-background-color: rgb(73, 165, 235);
-color: white;
-
-text-align: center;
-margin-bottom: 0.2vh;
-
+#addMoreMembers{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
 }
 
-#groups{
+#newMembers ,#moreUsers{
+    list-style: none;
+    
+}
+.settingsDivmember{
+    background-color: #2b476064;
+    padding: 0.8vh;
+    height: 38.7vh;
+    width: 32.5vw;
+}
+.settingsDivmember h4{
+    background-color: #367fba;
+    margin:0.8vh 0 ;
+    padding-left: 0.3vw;
+    border-radius: 0.2vh;
+}
+.settingsDivmember ul{
     overflow-y: auto;
-    height: 90%;
-
-}
-.groupname{
-    margin-bottom: 0.2vh;
-    font-weight: bold;
-    padding:0.5vh;
-    margin: 0.6vh auto;
-    text-align: center;
-    color: white;
-    background-color: #2b4760;
-border-radius: 0.5vh;
-box-shadow: 0.2vh 0.2vh rgb(138, 187, 233);
 }
 
-
-#header{
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    justify-content: space-around;
-    padding: 0.5vh 0.4vw;
-    margin: 0.2vh 0;
-    background-color:rgb(73, 165, 235) ;
-    border-top-right-radius: 1vh;
-    font-weight: bold;
-    color: rgb(255, 255, 255);
-}
-#newGrp{
-    padding :0.7vh;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-background-color:#367fba;
-border-radius:1vh ;
-margin-right: 1vh;
-font-weight: bold;
-border: 0;
+.settingsDivmember ul li{
+    background-color: #b4d2ea;
+    margin-bottom: 0.4vh;
+    padding-top: 0.2vh;
+    padding-left: 0.3vw;
 }
 
-#createNewGroup{
-    width: 80vw;
-    height: 100vh;
-    display:none;
-    flex-direction:column;
-    position: relative;
-    bottom: 30vh;
-    left: 10vw;
-border: 2px solid rgb(33, 141, 229);
-background-color: #b7d0dd;
-color: #a6bdc3;
-font-weight: bold;
-z-index:+10 ;
-border-radius: 1vh;
-}
-#groupdetails{
-    display: flexbox;
-        flex-direction: row;
-      color: rgb(52 66 110);
-        width: 76vw;
-        margin: 0.5vh 1vw;
-        height: 3.5vh;
-        align-items: center;
-        padding: 0 1vh;
-        background-color: #b7d0dd;
- }
-
- #closecreategroup{
-        float: right;
-   
-        width: 1.5vw;
-    }
-
-    #greategroup{
-        float: right;
-     
-    }
-
-
-
-#membersdiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+.removeNewMember{
+    height: 2vh;
+    font-size: smaller;
+    float: right;
 }
 
-.divmember{
-    margin: 0.5vh 0;
-    border-radius: 0.5vh;
-    background-color: rgb(255, 255, 255);
-    width: 47%;
-    height: 40vh;
-    padding: 0.4vh 0.3vw;
+
+
+
+
+
+
+#chatfunctions {
+  /* border: 2px solid black; */
+  display: block;
+  width: 80vw;
+}
+#chatfunctions h3 {
+  height: 4vh;
+}
+#selectgroup {
+  display: none;
+  width: 80vw;
+  justify-content: center;
+  text-align: center;
 }
 
-.divmember ul{
-    list-style-type: none;
-    overflow-y: auto;
-    text-align:start;
-    border-radius: 1vh;
-
-}
-.removemember{
-float: right;
-}
-.divmember ul li{
-    background-color:#2b4760;
-    text-align: center;
-    border-radius: 0.5vh;
-    margin: 0.2vh;
- padding: 0.6vh 0.6vh;
-    height: 3vh;
-    color: #f1f1f1;
+#selectgroup h2 {
+  margin-top: 30%;
+  color: white;
 }
 
-.divmember h3{
-    background-color: #2b4760;
-    border-radius: 0.5vh;
-    text-align: center;
-    color: #f1f1f1;
+#groupdiv {
+  width: 18vw;
+  /* border: 2px solid black; */
+  margin-right: 0.5vw;
+  background-color: #ffffff2e;
+  border-top-right-radius: 1vh;
+  padding: 0.2vh 0.2vw;
+  display: flex;
+  flex-direction: column;
+  height: 95.2vh;
+  cursor: pointer;
 }
 
-.btn{
-    background-color: #838f99;
-    color:black;
-    padding: 0.2vh 1.2vw;
-    font-weight: 600;
-    border: none;
-    border-radius: 0.5vh;
-    text-align: center;
-    margin-right: 1vh;
+h3 {
+  background-color: rgb(73, 165, 235);
+  color: white;
+
+  text-align: center;
+  margin-bottom: 0.2vh;
+}
+
+#groups {
+  overflow-y: auto;
+  height: 90%;
+}
+.groupname {
+  margin-bottom: 0.2vh;
+  font-weight: bold;
+  padding: 0.5vh;
+  margin: 0.6vh auto;
+  text-align: center;
+  color: white;
+  background-color: #2b4760;
+  border-radius: 0.5vh;
+  box-shadow: 0.2vh 0.2vh rgb(138, 187, 233);
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-around;
+  padding: 0.5vh 0.4vw;
+  margin: 0.2vh 0;
+  background-color: rgb(73, 165, 235);
+  border-top-right-radius: 1vh;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+#newGrp {
+  padding: 0.7vh;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  background-color: #367fba;
+  border-radius: 1vh;
+  margin-right: 1vh;
+  font-weight: bold;
+  border: 0;
+}
+
+#createNewGroup {
+  width: 80vw;
+  height: 50vh;
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 30vh;
+  left: 10vw;
+  border: 2px solid rgb(33, 141, 229);
+  background-color: #b7d0dd;
+  color: #a6bdc3;
+  font-weight: bold;
+  z-index: +10;
+  border-radius: 1vh;
+}
+#groupdetails {
+  display: flexbox;
+  flex-direction: row;
+  color: rgb(52 66 110);
+  width: 76vw;
+  margin: 0.5vh 1vw;
+  height: 3.5vh;
+  align-items: center;
+  padding: 0 1vh;
+  background-color: #b7d0dd;
+}
+
+#closecreategroup {
+  float: right;
+
+  width: 1.5vw;
+}
+
+#greategroup {
+  float: right;
+}
+
+#membersdiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.divmember {
+  margin: 0.5vh 0;
+  border-radius: 0.5vh;
+  background-color: rgb(255, 255, 255);
+  width: 47%;
+  height: 40vh;
+  padding: 0.4vh 0.3vw;
+}
+
+.divmember ul {
+  list-style-type: none;
+  overflow-y: auto;
+  text-align: start;
+  border-radius: 1vh;
+}
+.removemember {
+  float: right;
+}
+.divmember ul li {
+  background-color: #2b4760;
+  text-align: center;
+  border-radius: 0.5vh;
+  margin: 0.2vh;
+  padding: 0.6vh 0.6vh;
+  height: 3vh;
+  color: #f1f1f1;
+}
+
+.divmember h3 {
+  background-color: #2b4760;
+  border-radius: 0.5vh;
+  text-align: center;
+  color: #f1f1f1;
+}
+
+.btn {
+  background-color: #838f99;
+  color: black;
+  padding: 0.2vh 1.2vw;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.5vh;
+  text-align: center;
+  margin-right: 1vh;
+}
+
+#isAdmin{
+  font-size: smaller;
+  margin: 10vw;
 }
